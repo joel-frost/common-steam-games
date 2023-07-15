@@ -50,7 +50,7 @@ const App: React.FC = () => {
     setLoading(true);
     const requestBody: UsernamesRequestBody = { usernames };
     // Make a POST request to the API with the request body
-    fetch('http://localhost:8080/games/', {
+    fetch('/games/', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
