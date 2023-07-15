@@ -40,7 +40,7 @@ const App: React.FC = () => {
   };
 
   const handleRemoveInput = (index: number) => {
-    if (usernames.length === 1) return; // Do not remove the input if there's only one left
+    if (usernames.length === 1) return;
     const updatedUsernames = [...usernames];
     updatedUsernames.splice(index, 1);
     setUsernames(updatedUsernames);
@@ -49,7 +49,6 @@ const App: React.FC = () => {
   const handleSubmit = () => {
     setLoading(true);
     const requestBody: UsernamesRequestBody = { usernames };
-    // Make a POST request to the API with the request body
     fetch('/games/', {
       method: 'POST',
       headers: {
@@ -65,12 +64,10 @@ const App: React.FC = () => {
         }
       })
       .then((data: string[]) => {
-        // Handle the response data
         setGameList(data);
         setOpen(true);
       })
       .catch((error) => {
-        // Handle any errors
         console.error(error);
         setError(true);
       })
