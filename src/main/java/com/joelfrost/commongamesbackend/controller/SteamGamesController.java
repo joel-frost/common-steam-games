@@ -16,7 +16,6 @@ public class SteamGamesController {
     @Autowired
     private SteamGamesService steamGamesService;
 
-    @CrossOrigin
     @PostMapping()
     public List<String> getCommonSteamGames(@RequestBody RequestModel requestModel) throws JsonProcessingException {
         return steamGamesService.getCommonGames(requestModel.getUsernames());
