@@ -166,7 +166,6 @@ const App: React.FC = () => {
             <Link href="https://steamcommunity.com/my/edit/settings?snr=" underline="always" color="inherit">
               Profile Privacy Settings
             </Link>{' '}
-            on Steam.
           </Typography>
         </DialogContent>
       </Dialog>
